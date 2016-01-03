@@ -2,7 +2,9 @@
 import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
+import java.awt.Font;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 /*<html>
 <applet code="Shooter5.class" height=2000 width=2000>
 </applet>
@@ -22,8 +24,10 @@ public class Shooter5 extends Applet{
 		tf= new TextField(40);
 		tf.setEditable(false);
 		add(tf);
-		tf.setBounds(300, 10, 310, 20);
+		tf.setBounds(300, 10, 400, 30);
     	setLayout(new BorderLayout());
+    	Font myFont = new Font("TimesRoman", Font.BOLD, 24);
+    	tf.setFont(myFont);
 		img = getImage(getDocumentBase(), "myShooter.gif");
 		tf.setText("  Welcome Shooter! Have fun! :-)  ");
 	}
@@ -50,9 +54,9 @@ public class Shooter5 extends Applet{
 		g.setColor(Color.black);
 		g.drawLine(250,0,250,2000);
 			 
-	 	if(movX>100)
+	 	if(movX>104)
 	 	{
-	 		tf.setText("  Hey, No cheating! please move back and try again!");
+	 		tf.setText("Hey, No cheating! Move back!");
 	 	}
 		if(movX<=215 && movY<=600)
 		{	
@@ -69,23 +73,23 @@ public class Shooter5 extends Applet{
 					 }
 					 k=0;
 				}
-				if(((movY+60)>0 && (movY+60)<100) || ((movY+60)>200 && (movY+60)<280) || ((movY+60)>375 && (movY+60)<455) )
+				if(((movY+60)>0 && (movY+60)<95) || ((movY+60)>195 && (movY+60)<275) || ((movY+60)>370 && (movY+60)<450) )
 				{
-					if(((movY+60)>220 && (movY+60)<260) || ((movY+60)>45 && (movY+60)<85) || ((movY+60)>395 && (movY+60)<435) )
+					if(((movY+60)>215 && (movY+60)<255) || ((movY+60)>40 && (movY+60)<80) || ((movY+60)>390 && (movY+60)<430) )
 					{	
 						score=score+100;
-						tf.setText("  Bull's eye!! That was awesome.	Score: "+"  "+score);
+						tf.setText("  Bull's eye!!  Score: "+"  "+score);
 					}	
 					else
 					{
 						score=score+50;
-						tf.setText("  It's a hit! very nice.	Score: "+"  "+score);
+						tf.setText("  It's a hit!  Score: "+"  "+score);
 					}
 				}	
 				else
 				{
 					score=0;
-				    tf.setText("Oops! you missed the target. Try again.  Score: "+score);
+				    tf.setText("Oops! you missed it.  Score: "+score);
 				}
 			}
 		}
