@@ -4,9 +4,9 @@
 
 You have 3 targets in front of you.
 
-Hitting the inner circle of any of the 3 target will earn you a score of 100,
+Hitting the inner circle of any of the 3 targets will earn you a score of 100,
 
-while hitting the outer one will give you 50.
+while hitting the outer one will give you a score of 50.
 
 
 **Be warned!**
