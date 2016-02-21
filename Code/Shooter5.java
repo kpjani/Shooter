@@ -25,9 +25,9 @@ public class Shooter5 extends Applet{
 		tf.setEditable(false);
 		add(tf);
 		tf.setBounds(300, 10, 400, 30);
-    	setLayout(new BorderLayout());
-    	Font myFont = new Font("TimesRoman", Font.BOLD, 24);
-    	tf.setFont(myFont);
+    		setLayout(new BorderLayout());
+    		Font myFont = new Font("TimesRoman", Font.BOLD, 24);
+    		tf.setFont(myFont);
 		img = getImage(getDocumentBase(), "myShooter.gif");
 		tf.setText("  Welcome Shooter! Have fun! :-)  ");
 	}
@@ -89,7 +89,7 @@ public class Shooter5 extends Applet{
 				else
 				{
 					score=0;
-				    tf.setText("Oops! you missed it.  Score: "+score);
+				    	tf.setText("Oops! you missed it.  Score: "+score);
 				}
 			}
 		}
@@ -100,7 +100,7 @@ public class Shooter5 extends Applet{
 	{
 		movX=x;
 		movY=y;	
-	    k=1;
+	    	k=1;
 		repaint();
 		return true;
 	}
